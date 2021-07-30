@@ -1,0 +1,11 @@
+fn arithmetic(m: u32,n: u32){
+    println!("{}",m+n);
+    
+}
+fn main()
+    let m : u32 =4294967290;
+    let n : u32 =4294967290;
+    arithmetic(m,n);
+    let i = m+n;
+    println!("checked{:?}",i.checked_add(i));
+}
