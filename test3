@@ -1,0 +1,21 @@
+use std::ops::Mul;
+use std::convert::{Into};
+struct Rect<T,U>
+{
+    width: T,
+    height: U
+}
+
+impl <T,U> Rect<T,U>{
+    fn area(&self) -> T
+    where T: Mul<Output = T> + Copy,
+          U: Into<T> + Copy {
+              self.width.mul(self.height.into())
+          }
+}
+
+fn main(){
+    let rect2 = Rect{width:3.8,height:4};
+    println!("{}",rect2.area());
+
+}
