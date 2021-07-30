@@ -1,0 +1,29 @@
+fn main() {
+   let light1 = TrafficLight::Red;
+   println!("light is:{}",light1.time1());
+   
+   let light2 = TrafficLight::Green;
+   println!("light is:{}",light2.time2());
+   
+   let light3 = TrafficLight::Yellow;
+   println!("light is:{}",light3.time3());
+}
+
+enum TrafficLight {
+    Red,
+    Green,
+    Yellow,
+}
+
+impl TrafficLight{
+    fn time1(&self) -> u8 {
+    60
+    }
+    fn time2(&self) -> u8 {
+    12
+    }
+    fn time3(&self) -> u8 {
+    123
+    }
+    
+}
